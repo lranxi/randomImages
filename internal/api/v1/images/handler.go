@@ -19,7 +19,7 @@ type Handler interface {
 	UncheckList(c *gin.Context)
 	Audit(c *gin.Context)
 	List(c *gin.Context)
-
+	// Image 返回一张审核通过的随机图片
 	Image(c *gin.Context)
 }
 

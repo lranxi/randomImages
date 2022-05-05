@@ -12,3 +12,7 @@
   minidleconns = 5
   pass = "123456"
   poolsize = 10
+
+[auth]
+  username = '123456'
+  password = '123456'

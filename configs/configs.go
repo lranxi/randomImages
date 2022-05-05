@@ -28,6 +28,11 @@ type Config struct {
 		Port                   int    `toml:"port"`
 		GracefulShutdownPeriod int    `toml:"gracefulShutdownPeriod"`
 	} `toml:"server"`
+
+	Auth struct {
+		Username string `toml:"username"`
+		Password string `toml:"password"`
+	} `toml:"auth"`
 }
 
 //go:embed configs.toml

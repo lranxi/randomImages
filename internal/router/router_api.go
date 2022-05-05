@@ -3,6 +3,7 @@ package router
 import (
 	"api/configs"
 	"api/internal/api/v1/images"
+	"api/internal/router/interceptor/auth"
 	imagesService "api/internal/service/images"
 	"github.com/gin-contrib/pprof"
 )
@@ -20,8 +21,11 @@ func setApiRouter(s *Server) {
 	api := s.Engine
 
 	api.POST("/upload/:category", imagesController.Upload)
-	api.GET("/uncheck", imagesController.UncheckList)
-	api.POST("/audit", imagesController.Audit)
+
 	api.GET("/list", imagesController.List)
 	api.GET("/image", imagesController.Image)
+
+	authApi := api.Use(auth.AuthMiddleware())
+	authApi.GET("/uncheck", imagesController.UncheckList)
+	authApi.POST("/audit", imagesController.Audit)
 }
