@@ -1,0 +1,14 @@
+[server]
+  addr = "127.0.0.1"
+  port = 8088
+  env = "debug"
+  gracefulShutdownPeriod = 3
+
+
+[redis]
+  addr = "127.0.0.1:6379"
+  db = 15
+  maxretries = 3
+  minidleconns = 5
+  pass = "123456"
+  poolsize = 10
