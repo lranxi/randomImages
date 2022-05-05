@@ -36,11 +36,11 @@ func New(accessLogger *zap.Logger) (*Server, error) {
 		Engine: engine,
 	}
 
-	// 添加api路由
-	setApiRouter(server)
-
 	// 添加静态文件路由
 	setStaticRouter(server)
+
+	// 添加api路由
+	setApiRouter(server)
 
 	return server, nil
 

@@ -20,16 +20,16 @@ const (
 	ImageMaxSize = 5 << 20
 
 	// ImageMinWidth 图片最小宽度
-	ImageMinWidth = 0
+	ImageMinWidth = 1024
 
 	// ImageMaxWidth 图片大宽度
-	ImageMaxWidth = 9999
+	ImageMaxWidth = 4096
 
 	// ImageMinHeight 图片最小高度
-	ImageMinHeight = 0
+	ImageMinHeight = 768
 
 	// ImageMaxHeight 图片最大高度
-	ImageMaxHeight = 9999
+	ImageMaxHeight = 2160
 
 	// UncheckImageRedisKey 未检查图片的redis key
 	UncheckImageRedisKey = "images:uncheck"
